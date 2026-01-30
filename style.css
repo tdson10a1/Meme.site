@@ -1,144 +1,86 @@
-/* ===== Reset ===== */
+/* RESET */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* BODY */
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222;
 }
 
-/* ===== Skip link ===== */
-.skip-link {
-  position: absolute;
-  left: -999px;
+/* HEADER */
+.header {
+    background: #1f1f1f;
+    padding: 30px 20px;
+    text-align: center;
 }
 
-.skip-link:focus {
-  left: 10px;
-  top: 10px;
-  background: black;
-  color: white;
-  padding: 10px;
-  z-index: 1000;
+.header h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
 }
 
-/* ===== Page animation ===== */
-.page {
-  animation: fadeIn 0.5s ease-in;
+/* NAVIGATION */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.nav a {
+    text-decoration: none;
+    color: #bbbbbb;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
 }
 
-/* ===== Header ===== */
-header {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.nav a:hover {
+    color: #00ffd5;
+    transform: scale(1.1);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
+.nav a.active {
+    color: #00ffd5;
+    border-bottom: 2px solid #00ffd5;
+    padding-bottom: 4px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.2s ease;
+/* MAIN CONTENT */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
 }
 
-nav a:hover {
-  color: cyan;
-  transform: translateY(-2px);
+/* INTRO TEXT */
+.intro {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-nav a.current {
-  color: cyan;
-  text-decoration: underline;
+/* FEATURED MEME */
+.featured-meme {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-/* ===== Home grid ===== */
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  padding: 30px;
+.featured-meme img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-.home-grid img {
-  width: 100%;
-  border-radius: 14px;
-}
-
-/* ===== About grid ===== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  padding: 30px;
-}
-
-.about-grid img {
-  width: 100%;
-  border-radius: 14px;
-}
-
-/* ===== Category nav ===== */
-.category-nav {
-  display: flex;
-  gap: 10px;
-  padding: 20px;
-}
-
-.category-nav a {
-  border: 2px solid #333;
-  padding: 6px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: black;
-}
-
-/* ===== Meme gallery ===== */
-.meme-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 20px;
-}
-
-.meme-gallery img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border: 3px solid #333;
-  padding: 6px;
-  border-radius: 14px;
-  transition: transform 0.3s ease, border-radius 0.3s ease;
-}
-
-.meme-gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* ===== nth-child ===== */
-.meme-gallery img:nth-child(even) {
-  border-radius: 50%;
-}
-
-/* ===== Footer ===== */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
+/* FOOTER TEXT */
+.footer-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
 }
