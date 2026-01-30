@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Meme Gallery</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to Main Content</a>
+
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 
 <header>
-<h1>Meme Gallery</h1>
-<nav class="nav">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="memes.html" class="current">Memes</a></li>
-<li><a href="about.html">About</a></li>
-</ul>
-</nav>
+<h1>My Meme Collection 😆</h1>
+<p>All memes are for fun and entertainment</p>
 </header>
 
 
-<main id="main">
-<div class="grid-gallery">
-<!-- Chỉ cần copy dòng img này và đổi tên ảnh là thêm meme mới -->
-<img src="images/meme1.webp" alt="Funny meme 1">
-<img src="images/meme2.webp" alt="Funny meme 2">
-<img src="images/meme3.webp" alt="Funny meme 3">
-<img src="images/meme4.webp" alt="Funny meme 4">
-<img src="images/meme5.webp" alt="Funny meme 5">
-</div>
+<nav class="category-nav">
+<button onclick="showCategory('meme')">Meme</button>
+<button onclick="showCategory('cat')">Meme mèo 🐱</button>
+<button onclick="showCategory('dog')">Meme chó 🐶</button>
+<button onclick="showCategory('animals')">Động vật khác</button>
+</nav>
+
+
+<main id="main-content">
+<section class="gallery" id="meme">
+<img src="meme/me1.webp" alt="meme image">
+<img src="meme/me2.webp" alt="meme image">
+</section>
+
+
+<section class="gallery hidden" id="cat">
+<img src="cat/cat1.webp" alt="cat meme">
+<img src="cat/cat2.gif" alt="cat meme">
+</section>
+
+
+<section class="gallery hidden" id="dog">
+<img src="dog/d1.webp" alt="dog meme">
+<img src="dog/d2.png" alt="dog meme">
+</section>
+
+
+<section class="gallery hidden" id="animals">
+<img src="animals/a1.gif" alt="animal meme">
+<img src="animals/a2.webp" alt="animal meme">
+</section>
 </main>
 
 
 <footer>
-<p>All memes are for fun and entertainment</p>
+<p>© 2026 Meme Gallery</p>
 </footer>
+
+
+<script>
+function showCategory(id) {
+const sections = document.querySelectorAll('.gallery');
+sections.forEach(sec => sec.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+
 </body>
 </html>
