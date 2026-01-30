@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Memes</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meme Gallery</title>
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<a href="#main" class="skip-link">Skip to main content</a>
 
-<div class="page">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <header>
-  <h1>My Meme Collection 😂</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="memes.html" class="current">Memes</a>
-    <a href="about.html">About</a>
-  </nav>
+<h1>My Meme Collection 😆</h1>
+<p>All memes are for fun and entertainment</p>
 </header>
 
-<main id="main">
 
-<!-- CATEGORY NAV -->
-<div class="category-nav">
-  <a href="#meme">Meme</a>
-  <a href="#cat">Meme cat 🐱</a>
-  <a href="#dog">Meme dog 🐶</a>
-  <a href="#animals">Animals</a>
-</div>
+<nav class="category-nav">
+<button onclick="showCategory('meme')">Meme</button>
+<button onclick="showCategory('cat')">Meme mèo 🐱</button>
+<button onclick="showCategory('dog')">Meme chó 🐶</button>
+<button onclick="showCategory('animals')">Động vật khác</button>
+</nav>
 
-<!-- MEME -->
-<h2 id="meme">Meme</h2>
-<div class="meme-gallery">
-  <img src="meme/me1.webp" alt="Meme 1">
-  <img src="meme/me2.webp" alt="Meme 2">
-  <img src="meme/me3.webp" alt="Meme 3">
-  <img src="meme/me4.webp" alt="Meme 4">
-  <img src="meme/me5.webp" alt="Meme 5">
-</div>
 
-<!-- CAT -->
-<h2 id="cat">Cat Memes</h2>
-<div class="meme-gallery">
-  <img src="cat/cat1.webp" alt="Cat meme 1">
-  <img src="cat/cat2.gif" alt="Cat meme 2">
-  <img src="cat/cat3.webp" alt="Cat meme 3">
-  <img src="cat/cat4.gif" alt="Cat meme 4">
-  <img src="cat/cat5.gif" alt="Cat meme 5">
-</div>
+<main id="main-content">
+<section class="gallery" id="meme">
+<img src="meme/me1.webp" alt="meme image">
+<img src="meme/me2.webp" alt="meme image">
+</section>
 
-<!-- DOG -->
-<h2 id="dog">Dog Memes</h2>
-<div class="meme-gallery">
-  <img src="dog/d1.webp" alt="Dog meme 1">
-  <img src="dog/d2.png" alt="Dog meme 2">
-  <img src="dog/d3.jpg" alt="Dog meme 3">
-  <img src="dog/d4.jpg" alt="Dog meme 4">
-  <img src="dog/d5.jpg" alt="Dog meme 5">
-</div>
 
+<section class="gallery hidden" id="cat">
+<img src="cat/cat1.webp" alt="cat meme">
+<img src="cat/cat2.gif" alt="cat meme">
+</section>
+
+
+<section class="gallery hidden" id="dog">
+<img src="dog/d1.webp" alt="dog meme">
+<img src="dog/d2.png" alt="dog meme">
+</section>
+
+
+<section class="gallery hidden" id="animals">
+<img src="animals/a1.gif" alt="animal meme">
+<img src="animals/a2.webp" alt="animal meme">
+</section>
 </main>
 
+
 <footer>
-  <p>All memes are for fun and entertainment</p>
+<p>© 2026 Meme Gallery</p>
 </footer>
 
-</div>
+
+<script>
+function showCategory(id) {
+const sections = document.querySelectorAll('.gallery');
+sections.forEach(sec => sec.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+
 </body>
 </html>
