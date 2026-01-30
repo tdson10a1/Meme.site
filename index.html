@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Meme Gallery</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Meme Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<a href="#main" class="skip-link">Skip to main content</a>
 
-<div class="page">
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Welcome to My Meme Gallery 😆</h1>
 
-<header>
-  <h1>Welcome to My Meme Gallery 😆</h1>
-  <nav>
-    <a href="index.html" class="current">Home</a>
-    <a href="memes.html">Memes</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="memes.html">Memes</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
 
-<main id="main" class="home-grid">
-  <section>
-    <p>
-      This website is a personal collection of memes that make my day better 😊
-    </p>
-  </section>
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <p class="intro">
+            This website is a personal collection of memes that make my day better 😊
+        </p>
 
-  <section>
-    <img src="meme/me1.webp" alt="Featured meme">
-  </section>
-</main>
+        <div class="featured-meme">
+            <img src="meme/meme1.jpg" alt="Featured meme">
+        </div>
 
-<footer>
-  <p>Final Project – Web Design for Everybody</p>
-</footer>
+        <p class="footer-text">
+            Final Project – Web Design for Everybody
+        </p>
+    </main>
 
-</div>
 </body>
 </html>
